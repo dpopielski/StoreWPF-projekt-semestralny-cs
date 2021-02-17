@@ -12,9 +12,10 @@
         <Grid.Background>
             <ImageBrush ImageSource="emile-seguin-R9OueKOtGGU-unsplash.jpg"/>
         </Grid.Background>
-        <TextBox Height="35" Margin="94,105,95,299.6" Width="191" TextChanged="TextBox_TextChanged" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <TextBox Name="textBoxUsername" Height="35" Margin="94,105,95,299.6" Width="191" TextChanged="TextBox_TextChanged" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
         <PasswordBox Margin="94,197,95,207.6" Width="191" Height="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Button Content="Login" HorizontalAlignment="Left" Margin="94,344,0,0" Grid.Row="1" VerticalAlignment="Top" Width="191" Height="43" Click="Button_Click"/>
+        <TextBlock Height="23" x:Name ="errormessage" Width="242" Margin="69,246,69,170.6"  OpacityMask="Crimson" Foreground="#FFE5572C"  />
         <TextBlock HorizontalAlignment="Center" Margin="151,68,140,340" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="18" Width="89" Height="32" Text="Username:"/>
         <TextBlock HorizontalAlignment="Center" Margin="151,160,145,248" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="18" Width="84" Height="32" Text="Password:"/>
     </Grid>
