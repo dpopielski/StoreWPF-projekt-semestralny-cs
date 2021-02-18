@@ -35,7 +35,7 @@ namespace ProjektWpfApp
             {
                 errormessage.Text = "Proszę wprowadzić username";
                 textBoxUsername.Focus();
-            }  else if (!Regex.IsMatch(textBoxUsername.Text, @"[a - z0 - 9]{ 6,20}"))
+            }  else if (!Regex.IsMatch(textBoxUsername.Text, @"^[a - zA - Z0 - 9] + ([._]?[a - zA - Z0 - 9] +) *$"))
             {
                 errormessage.Text = "Proszę wprowadzić poprawny username";
                 textBoxUsername.Select(0, textBoxUsername.Text.Length);
