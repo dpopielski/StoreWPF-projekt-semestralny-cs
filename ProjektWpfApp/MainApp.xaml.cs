@@ -18,7 +18,7 @@ namespace ProjektWpfApp
     /// <summary>
     /// Logika interakcji dla klasy MainApp.xaml
     /// </summary>
-    public partial class MainApp : Page
+    public partial class MainApp : Window
     {
         public MainApp()
         {
@@ -28,6 +28,22 @@ namespace ProjektWpfApp
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            AddNewProductWindow addNewWindow = new AddNewProductWindow();
+            addNewWindow.Show();
         }
     }
 }

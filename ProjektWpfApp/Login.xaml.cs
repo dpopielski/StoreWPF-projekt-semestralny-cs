@@ -19,7 +19,7 @@ namespace ProjektWpfApp
     /// <summary>
     /// Logika interakcji dla klasy Login.xaml
     /// </summary>
-    public partial class Login : Page
+    public partial class Login : Window
     {
         public Login()
         {
@@ -31,19 +31,17 @@ namespace ProjektWpfApp
             
             MainApp mainApp = new MainApp();
 
-            if (textBoxUsername.Text.Length == 0)
+            if (textBoxUsername.Text == "projekt" && textBoxPassword.Password == "projekt")
             {
-                errormessage.Text = "Proszę wprowadzić username";
-                textBoxUsername.Focus();
-            }  else if (!Regex.IsMatch(textBoxUsername.Text, @"^[a - zA - Z0 - 9] + ([._]?[a - zA - Z0 - 9] +) *$"))
-            {
-                errormessage.Text = "Proszę wprowadzić poprawny username";
-                textBoxUsername.Select(0, textBoxUsername.Text.Length);
-                textBoxUsername.Focus();
+                mainApp.Show();
+                Close();
             } else
             {
-                // View mainApp page
-                this.NavigationService.Navigate(mainApp);
+                errormessage.Text = "Proszę wprowadzić poprawną nazwa użytkownika i hasło";
+                textBoxUsername.Select(0, textBoxUsername.Text.Length);
+                textBoxPassword.SelectAll();
+                textBoxUsername.Focus();
+                textBoxPassword.Focus();
             }
         }
 
@@ -51,50 +49,5 @@ namespace ProjektWpfApp
         {
 
         }
-
-        //private void button1_Click(object sender, RoutedEventArgs e)
-        //{
-        //    if (textBoxUsername.Text.Length == 0)
-        //    {
-        //        errormessage.Text = "Proszę wprowadzić username";
-        //        textBoxUsername.Focus();
-        //    }
-        //    else if (!Regex.IsMatch(textBoxEmail.Text, @"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$"))
-        //    {
-        //        errormessage.Text = "Enter a valid email.";
-        //        textBoxEmail.Select(0, textBoxEmail.Text.Length);
-        //        textBoxEmail.Focus();
-        //    }
-        //    else
-        //    {
-        //        string email = textBoxEmail.Text;
-        //        string password = passwordBox1.Password;
-        //        SqlConnection con = new SqlConnection("Data Source=TESTPURU;Initial Catalog=Data;User ID=sa;Password=wintellect");
-        //        con.Open();
-        //        SqlCommand cmd = new SqlCommand("Select * from Registration where Email='" + email + "'  and password='" + password + "'", con);
-        //        cmd.CommandType = CommandType.Text;
-        //        SqlDataAdapter adapter = new SqlDataAdapter();
-        //        adapter.SelectCommand = cmd;
-        //        DataSet dataSet = new DataSet();
-        //        adapter.Fill(dataSet);
-        //        if (dataSet.Tables[0].Rows.Count > 0)
-        //        {
-        //            string username = dataSet.Tables[0].Rows[0]["FirstName"].ToString() + " " + dataSet.Tables[0].Rows[0]["LastName"].ToString();
-        //            welcome.TextBlockName.Text = username;//Sending value from one form to another form.  
-        //            welcome.Show();
-        //            Close();
-        //        }
-        //        else
-        //        {
-        //            errormessage.Text = "Sorry! Please enter existing emailid/password.";
-        //        }
-        //        con.Close();
-        //    }
-        //}
-        //private void buttonRegister_Click(object sender, RoutedEventArgs e)
-        //{
-        //    registration.Show();
-        //    Close();
-        //}
     }
 }
