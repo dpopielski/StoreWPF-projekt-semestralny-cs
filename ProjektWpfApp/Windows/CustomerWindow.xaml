@@ -1,0 +1,68 @@
+﻿<Window x:Class="ProjektWpfApp.CustomerWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjektWpfApp"
+      mc:Ignorable="d"
+      Title="Klienci" Height="465" Width="615" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" Icon="../Images/customer.png">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="../Images/window_bg.jpg"/>
+        </Grid.Background>
+        <TextBlock HorizontalAlignment="Left" Margin="28,285,0,0" TextWrapping="Wrap" Text="Imię" VerticalAlignment="Top" Height="20" Width="62" FontSize="15px"/>
+        <TextBox x:Name="nameInput" HorizontalAlignment="Left"
+            TextAlignment="Center"
+            Height="21"
+            Margin="106,285,0,0"
+            TextWrapping="Wrap"
+            Text=""
+            VerticalAlignment="Top"
+            Width="172"/>
+        <TextBlock HorizontalAlignment="Left" Margin="28,322,0,0" TextWrapping="Wrap" Text="Nazwisko" VerticalAlignment="Top" Height="22" Width="69" FontSize="15px" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.223"/>
+                    <TranslateTransform X="0.084" Y="-0.387"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBox x:Name="lnameInput" TextAlignment="Center" HorizontalAlignment="Left" Height="22" Margin="106,322,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.223"/>
+                    <TranslateTransform X="0.083" Y="0.12"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button x:Name="addButton" Content="Dodaj" HorizontalAlignment="Left" Margin="20,378,0,0" VerticalAlignment="Top" Width="137" Height="33" FontSize="18px" Click="addButton_Click" />
+        <TextBlock HorizontalAlignment="Left" Margin="346,285,0,0" TextWrapping="Wrap" Text="Tel" VerticalAlignment="Top" Height="21" Width="62" FontSize="15px"/>
+        <TextBox x:Name="telInput" HorizontalAlignment="Left"
+            TextAlignment="Center"
+            Height="21"
+            Margin="412,285,0,0"
+            TextWrapping="Wrap"
+            Text=""
+            VerticalAlignment="Top"
+            Width="167"/>
+        <TextBlock 
+            Margin="346,323,0,0"
+            TextWrapping="Wrap"
+            Text="Adres"
+            Height="21"
+            Width="62"
+            FontSize="15px"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"/>
+        <TextBox x:Name="addressInput" TextAlignment="Center" HorizontalAlignment="Left" Height="22" Margin="412,323,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167"/>
+        <DataGrid IsReadOnly="True" ColumnWidth="*" x:Name="dataGrid" HorizontalAlignment="Left" Height="245" Margin="22,10,0,0" VerticalAlignment="Top" Width="557" SelectionChanged="dataGrid_SelectionChanged"/>
+        <Button x:Name="removeButton" Content="Usuń" HorizontalAlignment="Left" Margin="164,378,0,0" VerticalAlignment="Top" Width="137" Height="33" FontSize="18px" Click="removeButton_Click"/>
+        <Button x:Name="editButton" Content="Edytuj" HorizontalAlignment="Left" Margin="306,378,0,0" VerticalAlignment="Top" Width="137" Height="33" FontSize="18px" Click="editButton_Click"/>
+        <Button x:Name="clearButton" Content="Wyczyść" HorizontalAlignment="Left" Margin="448,378,0,0" VerticalAlignment="Top" Width="137" Height="33" FontSize="18px" Click="clearButton_Click"/>
+    </Grid>
+</Window>
