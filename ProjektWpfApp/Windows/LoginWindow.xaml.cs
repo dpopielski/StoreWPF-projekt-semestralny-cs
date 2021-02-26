@@ -31,17 +31,15 @@ namespace ProjektWpfApp
             
             var store = new StoreWindow();
 
-            if (textBoxUsername.Text == "Projekt" && textBoxPassword.Password == "Semestralny")
+            if (textBoxUsername.Text == "Damian" && textBoxPassword.Password == "Popielski")
             {
                 store.Show();
                 Close();
             } else
             {
-                errormessage.Text = "Proszę wprowadzić poprawną nazwa użytkownika i hasło";
+                errormessage.Text = "Proszę wprowadzić poprawną nazwę użytkownika i hasło";
                 textBoxUsername.Select(0, textBoxUsername.Text.Length);
-                textBoxPassword.SelectAll();
                 textBoxUsername.Focus();
-                textBoxPassword.Focus();
             }
         }
     }

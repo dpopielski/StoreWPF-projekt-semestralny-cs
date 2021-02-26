@@ -11,13 +11,12 @@
         <Grid.Background>
             <ImageBrush ImageSource="../Images/login_bg.jpg"/>
         </Grid.Background>
-        <TextBox Name="textBoxUsername" Height="35" Margin="99,109,100,275" Width="191" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="projekt" />
-        <PasswordBox x:Name="textBoxPassword" Margin="99,197,100,187" Width="191" Height="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Password="projekt"/>
-        <Button Content="Login" HorizontalAlignment="Left" Margin="99,331,0,0" VerticalAlignment="Top" Width="191" Height="43" Click="Button_Click" IsDefault="True"/>
+        <TextBox Name="textBoxUsername" Height="35" Margin="99,109,100,275" Width="191" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="Damian" />
+        <PasswordBox x:Name="textBoxPassword" Margin="99,197,100,187" Width="191" Height="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Password="Popielski"/>
+        <Button Content="Zaloguj się" HorizontalAlignment="Left" Margin="99,331,0,0" VerticalAlignment="Top" Width="191" Height="43" Click="Button_Click" IsDefault="True"/>
         <TextBlock 
             x:Name ="errormessage"
-            Height="23"
-            Margin="48,238,48,160"
+            Margin="25,238,23,148"
             TextAlignment="Center"
             OpacityMask="Crimson"
             Foreground="#FFE5572C"
